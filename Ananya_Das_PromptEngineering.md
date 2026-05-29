@@ -8,7 +8,7 @@ LLM Used: GPT-5.5
 
 
 | Version | Prompt | What Changed | Why This Improved the Output |
-| -------- | --- | ----------- |
+| ---- | ---- | ----------- | ------------ |
 | V1 | [Your initial prompt]  | N/A | N/A |
 | V2 | [Your initial prompt]  | [Specific changes made] | [Explanation] |
 | V3 | [Your initial prompt]  | [Specific changes made] | [Explanation] |

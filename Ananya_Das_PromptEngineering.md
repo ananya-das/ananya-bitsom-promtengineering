@@ -15,6 +15,13 @@ LLM Used: GPT-5.5
 
 
 ### 1.1 Scenario B: Professional Email
+
+|     Temperature    |   Setting Description  |        Expected Behavior        |
+|:------------------:|:----------------------:|:-------------------------------:|
+| Low (0.0 - 0.3)    | Deterministic, focused | More factual, consistent        |
+| Medium (0.6 - 0.8) | Balanced               | Mix of creativity and coherence |
+| High (1.0 - 1.5)   | Creative, random       | More diverse, unpredictable     |
+
 ### 1.1 Scenario C: Creative Content
 ### 1.2 Iteration Documentation
 ### 1.3 Role and Context Analysis
@@ -26,6 +33,15 @@ LLM Used: GPT-5.5
 ## Part 3: Strategic Prompting Techniques
 ### 3.1 Chain-of-Thought Prompting
 ### 3.2 Few-Shot Prompting
+
+| Review # | Zero-Shot Result | Few-Shot Result | Correct Label | Improved? |
+|:--------:|:----------------:|:---------------:|:-------------:|:---------:|
+| 1        |                  |                 | Negative      | Yes/No    |
+| 2        |                  |                 | Neutral       | Yes/No    |
+| 3        |                  |                 | Positive      | Yes/No    |
+| 4        |                  |                 | Neutral       | Yes/No    |
+| 5        |                  |                 | Negative      | Yes/No    |
+
 
 ## Part 4: Responsible AI & Limitations
 ### 4.1 Testing for Hallucinations

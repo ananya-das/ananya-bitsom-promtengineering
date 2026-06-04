@@ -113,17 +113,108 @@ Better Bottles. Better Future.
 
 ### 1.3 Role and Context Analysis
 
+```
+Role assignment and context setting significantly improved the quality of the outputs. In Scenario A, assigning the role of an elementary school teacher encouraged the model to use simpler language, relatable examples, and storytelling suitable for children. In Scenario B, assigning the role of a career coach resulted in a more professional and relationship-oriented email. In Scenario C, providing the role of a sustainability-focused copywriter and specifying the target audience helped generate taglines that matched the brand's positioning and marketing goals. Overall, adding role and context produced more accurate, targeted, and high-quality responses.
+```
+
 ## Part 2: Temperature & Parameter Control
 ### 2.1 Temperature Experimentation
 
+**Base Prompt: Write a product desciption for laptop**
 
-|     Temperature    |   Setting Description  |        Expected Behavior        |
-|:------------------:|:----------------------:|:-------------------------------:|
-| Low (0.0 - 0.3)    | Deterministic, focused | More factual, consistent        |
-| Medium (0.6 - 0.8) | Balanced               | Mix of creativity and coherence |
-| High (1.0 - 1.5)   | Creative, random       | More diverse, unpredictable     |
+**1. Temperature Low(0.0-1.3) Prompt:**
+Write a product description for laptop of brand x. Be precise and consistent.
+
+**Output:**: 
+```
+**Brand X UltraBook Pro 14**
+
+Experience seamless performance with the Brand X UltraBook Pro 14, designed for professionals, students, and everyday users. Powered by the latest-generation processor and equipped with 16GB RAM, it delivers fast multitasking and smooth application performance.
+
+The 14-inch Full HD display provides sharp visuals and vibrant colors, making it ideal for work, entertainment, and video conferencing. With a lightweight aluminum chassis and a battery life of up to 12 hours, the UltraBook Pro 14 is built for productivity on the go.
+
+Key Features:
+
+* 14-inch Full HD anti-glare display
+* Latest-generation processor
+* 16GB RAM and 512GB SSD storage
+* Up to 12 hours of battery life
+* Lightweight aluminum design
+* Wi-Fi 6 and Bluetooth connectivity
+* HD webcam with noise-reduction microphones
+
+The Brand X UltraBook Pro 14 combines performance, portability, and reliability in a sleek, modern package.
+```
+**2. Temperature Medium (0.6 - 0.8) Prompt:**
+Write a product description for laptop of brand x.
+
+**Output:**:
+```
+**Brand X Laptop**
+
+The Brand X Laptop is designed to deliver reliable performance, modern design, and everyday productivity. Featuring a powerful processor, high-speed SSD storage, and a vibrant Full HD display, it enables smooth multitasking, faster load times, and an immersive viewing experience.
+
+Its lightweight construction and long-lasting battery make it ideal for professionals, students, and remote workers who need performance on the go. With advanced connectivity options and a comfortable keyboard, the Brand X Laptop helps you stay productive wherever you are.
+
+**Key Features:**
+
+* High-performance processor for seamless multitasking
+* Full HD display with sharp and vibrant visuals
+* Fast SSD storage for quick boot and load times
+* Long battery life for all-day productivity
+* Lightweight and portable design
+* Multiple connectivity options, including Wi-Fi and Bluetooth
+
+The Brand X Laptop combines performance, portability, and value, making it a dependable choice for work, study, and entertainment.
+```
+
+**3. Temperature High (1.0 - 1.5) Prompt:**
+Write a product description for laptop of brand x.Be creative and explore diverse ideas.
+
+**Output:**
+```
+**Brand X NovaBook: Where Ideas Take Flight**
+
+Not all laptops are built for dreamers. The Brand X NovaBook is.
+
+Crafted for creators, innovators, and go-getters, the NovaBook transforms everyday tasks into extraordinary experiences. Its lightning-fast performance keeps pace with your biggest ambitions, while the stunning edge-to-edge display brings every detail to life—from spreadsheets and presentations to movies and masterpieces.
+
+Slip it into your backpack, carry it across cities, or open it in your favorite café. With its ultra-slim design and all-day battery life, the NovaBook is ready whenever inspiration strikes.
+
+Whether you're editing videos at sunrise, presenting your next big idea at noon, or streaming your favorite series at night, Brand X delivers the power, speed, and elegance to make every moment productive and enjoyable.
+
+**Why You'll Love It**
+
+* Blazing-fast performance for work and play
+* Immersive display with vibrant, true-to-life colors
+* Lightweight design built for life on the move
+* Long-lasting battery that keeps up with your day
+* Intelligent cooling for smooth, uninterrupted performance
+* Modern, minimalist aesthetics that stand out anywhere
+
+**Brand X NovaBook — because your next great idea deserves a laptop that can keep up.**
+```
+
+**Comparision Table:**
+
+| Aspect         | Low Temperature (0.2) | Medium Temperature (0.7) | High Temperature (1.3) |
+| -------------- | --------------------- | ------------------------ | ---------------------- |
+| Creativity     | Low                   | Moderate                 | High                   |
+| Writing Style  | Direct and factual    | Balanced and engaging    | Imaginative and unique |
+| Predictability | High                  | Medium                   | Low                    |
+| Best Use Case  | Facts, documentation  | General-purpose writing  | Stories, brainstorming |
+
 
 ### 2.2 Analysis & Recommendations
+* **When to use Low temperature:**
+  - Low temperature should be used when accuracy, consistency, and predictability are important. Two examples are generating technical documentation and answering factual customer support questions, where reliable and repeatable responses are needed.
+
+* **When to use high temperature:**
+ - High temperature is useful when creativity and originality are more important than consistency. Two examples are generating story ideas and creating marketing slogans, where unique and diverse outputs are desirable.
+
+For this storytelling task, the medium temperature (0.7) produced the best result.It provides accurate product information while still making the description engaging and persuasive.
+Low temperature can make the description sound too robotic and technical.
+High temperature can introduce overly creative language that may distract from the product's actual features.
 
 ## Part 3: Strategic Prompting Techniques
 ### 3.1 Chain-of-Thought Prompting

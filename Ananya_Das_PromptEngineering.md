@@ -6,11 +6,11 @@ LLM Used: GPT-5.5
 ## Part 1: Prompt Design & Iteration
 ### 1.1 Scenario A: Technical Explanation
 
-Goal: Explain a complex technical concept (e.g., "blockchain", "neural networks", "recursion") to a 10-year-old
-Initial Prompt: Explain blockchain concept in few words.
-Refined Prompt version 1: Explain blockchain to a 10 year old with simple examples and non-technical terms.
-Refined Prompt version 2: You are an expert elementary school teacher. Explain blockchain to a 10-year-old child using a fun story, simple language, and a real-life example. Keep it short and simple
-Final Output:
+- Goal: Explain a complex technical concept (e.g., "blockchain", "neural networks", "recursion") to a 10-year-old
+- Initial Prompt: Explain blockchain concept in few words.
+- Refined Prompt version 1: Explain blockchain to a 10 year old with simple examples and non-technical terms.
+- Refined Prompt version 2: You are an expert elementary school teacher. Explain blockchain to a 10-year-old child using a fun story, simple language, and a real-life example. Keep it short and simple
+- Final Output:
 ```
   * The Magic Sticker Book
 
@@ -32,14 +32,14 @@ Blockchain is a shared record book that many people keep together so everyone ca
 ```
 
 ### 1.1 Scenario B: Professional Email
-Goal: Draft an email declining a job offer politely while expressing continued interest in the company
-Initial Prompt: Write an email declining a job offer.
+- Goal: Draft an email declining a job offer politely while expressing continued interest in the company
+- Initial Prompt: Write an email declining a job offer.
 
-Refined Prompt version 1: Write a professional email declining a job offer while thanking the company and expressing interest for future oppurtunity.
+- Refined Prompt version 1: Write a professional email declining a job offer while thanking the company and expressing interest for future oppurtunity.
 
-Refined Prompt version 2: You are a professional career coach. Draft a polite and professional email declining a job offer because I have accepted another opportunity. Thank the hiring team, express appreciation for their time and confidence in me, and mention that I would like to stay connected and explore future opportunities with the company. Keep the tone warm and professional.
+- Refined Prompt version 2: You are a professional career coach. Draft a polite and professional email declining a job offer because I have accepted another opportunity. Thank the hiring team, express appreciation for their time and confidence in me, and mention that I would like to stay connected and explore future opportunities with the company. Keep the tone warm and professional.
 
-Final Output:
+- Final Output:
 ```
 Dear [Hiring Manager's Name],
 
@@ -64,11 +64,11 @@ Warm regards,
 ```
 
 ### 1.1 Scenario C: Creative Content
-Goal: Generate a creative marketing tagline for a new eco-friendly water bottle brand.
-Initial Prompt: Create a tagline for eco-friendly water bottle.
-Refined Prompt Version 1: Create top 5 catchy taglines for reusable eco-friendly water bottle that can be used by the young generation and genzs.
-Refined Prompt Version 2: You are a professional copywriter specializing in sustainable consumer brands. Create 5 short, memorable, and modern taglines for a premium eco-friendly water bottle brand targeted at environmentally conscious young professionals and genzs. Each tagline should be under 8 words and emphasize sustainability, style, and everyday use
-Final Output:
+- Goal: Generate a creative marketing tagline for a new eco-friendly water bottle brand.
+- Initial Prompt: Create a tagline for eco-friendly water bottle.
+- Refined Prompt Version 1: Create top 5 catchy taglines for reusable eco-friendly water bottle that can be used by the young generation and genzs.
+- Refined Prompt Version 2: You are a professional copywriter specializing in sustainable consumer brands. Create 5 short, memorable, and modern taglines for a premium eco-friendly water bottle brand targeted at environmentally conscious young professionals and genzs. Each tagline should be under 8 words and emphasize sustainability, style, and everyday use
+- Final Output:
 ```
 Refill in Style, Leave Less Behind.
 Sustainable Sips, Everyday Elegance.

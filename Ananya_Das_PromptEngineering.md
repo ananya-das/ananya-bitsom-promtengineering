@@ -217,16 +217,103 @@ Low temperature can make the description sound too robotic and technical.
 High temperature can introduce overly creative language that may distract from the product's actual features.
 
 ## Part 3: Strategic Prompting Techniques
+
 ### 3.1 Chain-of-Thought Prompting
+**Problem Selected:** Option B: Multi-Step Reasoning
+
+**1. Without Chain-of-Thought**: 
+Prompt: Problem: A company has 150 employees. 60% work in engineering, 25% in sales,
+and the rest in operations. If the company plans to hire 20% more engineers
+and 10% more sales people, how many total employees will there be after hiring? Give only the final answer.
+
+**Output**
+```
+172 employees (approximately)
+```
+
+**2. With Chain-of-Thought:**
+Prompt: A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineers and 10% more sales people, how many total employees will there be after hiring? Let's solve this step by step
+
+**Output:**
+```
+Engineering employees = 60% of 150 = 90
+Sales employees = 25% of 150 = 37.5
+New engineering hires = 20% of 90 = 18
+New sales hires = 10% of 37.5 = 3.75
+Total new hires = 18 + 3.75 = 21.75
+Total employees after hiring = 150 + 21.75 = 171.75
+
+Final Answer: 171.75 employees (approximately 172 employees).
+
+```
+**3. Comparison**
+- How the outputs differed:
+  - The non-chain-of-thought prompt provided only the final answer without showing how it was calculated. The chain-of-thought prompt broke the problem into smaller steps, making the reasoning process transparent and easier to verify.
+
+- Why chain-of-thought helps with complex reasoning:
+  - Chain-of-thought helps with complex reasoning because it reduces the chance of missing intermediate calculations and allows users to identify mistakes if they occur.
+
+- One limitation you observed:
+  - One limitation is that it produces longer responses and may be unnecessary for very simple questions.
+
 ### 3.2 Few-Shot Prompting
 
+### Step 1: Zero-Shot Attempt:
+Prompt: Classify each customer review as Positive, Negative, or Neutral. 
+1. "The product arrived damaged and customer service was unhelpful."
+2. "Works as expected, nothing special but does the job."
+3. "Absolutely love this! Best purchase I've made all year!"
+4. "The quality is okay but slightly overpriced for what you get."
+5. "Terrible experience, would not recommend to anyone."
+
+| Customer Review                                                   | Sentiment    |
+| ----------------------------------------------------------------- | ------------ |
+| "The product arrived damaged and customer service was unhelpful." | **Negative** |
+| "Works as expected, nothing special but does the job."            | **Neutral**  |
+| "Absolutely love this! Best purchase I've made all year!"         | **Positive** |
+| "The quality is okay but slightly overpriced for what you get."   | **Neutral**  |
+| "Terrible experience, would not recommend to anyone."             | **Negative** |
+
+### Step 2: Few-Shot Attempt 
+**Prompt:**
+```
+Classify each review as Positive, Negative, or Neutral.
+Review: "This product exceeded my expectations!"
+Sentiment: Positive
+Review: "Completely broke after one week of use."
+Sentiment: Negative
+Review: "It's fine, does what it says on the box."
+Sentiment: Neutral
+Now classify the following reviews.
+1. "The product arrived damaged and customer service was unhelpful."
+2. "Works as expected, nothing special but does the job."
+3. "Absolutely love this! Best purchase I've made all year!"
+4. "The quality is okay but slightly overpriced for what you get."
+5. "Terrible experience, would not recommend to anyone."
+```
+
+**Result:**
+| S.No | Review                                                          | Sentiment    |
+| ---- | --------------------------------------------------------------- | ------------ |
+| 1    | The product arrived damaged and customer service was unhelpful. | **Negative** |
+| 2    | Works as expected, nothing special but does the job.            | **Neutral**  |
+| 3    | Absolutely love this! Best purchase I've made all year!         | **Positive** |
+| 4    | The quality is okay but slightly overpriced for what you get.   | **Neutral**  |
+| 5    | Terrible experience, would not recommend to anyone.             | **Negative** |
+
+
+### Step 3: Analysis:
+**Comparision**
 | Review # | Zero-Shot Result | Few-Shot Result | Correct Label | Improved? |
 |:--------:|:----------------:|:---------------:|:-------------:|:---------:|
-| 1        |                  |                 | Negative      | Yes/No    |
-| 2        |                  |                 | Neutral       | Yes/No    |
-| 3        |                  |                 | Positive      | Yes/No    |
-| 4        |                  |                 | Neutral       | Yes/No    |
-| 5        |                  |                 | Negative      | Yes/No    |
+| 1        | Negative         | Negative        | Negative      | No    |
+| 2        | Neutral          | Neutral         | Neutral       | No    |
+| 3        | Positive         | Positive        | Positive      | No    |
+| 4        | Neutral          | Neutral         | Neutral       | No    |
+| 5        | Negative         | Negative        | Negative      | No    |
+
+**Explaination**
+- In this example, both zero-shot and few-shot prompting produced the same classifications because the reviews contained clear sentiment cues. Few-shot prompting is most useful when tasks are ambiguous, domain-specific, or require a particular output format. Providing examples helps the model understand the expected pattern and improves consistency across responses.
 
 
 ## Part 4: Responsible AI & Limitations
